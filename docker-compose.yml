@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-image-docker
+    container_name: my-container-docker
+    ports:
+      - "9000:3000"
+    command: [ "npm", "start" ]
